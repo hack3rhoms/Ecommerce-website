@@ -1,0 +1,95 @@
+﻿@model E_project.Models.Categories
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; // استخدام Layout الإدارة مباشرة
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div id="successMessage" class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<script>
+    // انتظر 5 ثوانٍ ثم احذف الرسالة نهائيًا
+    setTimeout(function () {
+        var successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            successMessage.remove(); // حذف العنصر من DOM
+        }
+    }, 2000); // انتظر 5 ثوانٍ قبل الحذف
+</script>
+
+
+<div class="container-fluid">
+    <!-- نموذج إضافة فئة -->
+    <div class="row">
+        <div class="col-12">
+            <h2>Add Category</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Add Category</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form asp-action="AddCategory" method="post">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Category Name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter Category Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- قائمة الفئات -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h3>Category List</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Actions</th> <!-- عمود الإجراءات -->
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.CategoriesList != null)
+                    {
+                        foreach (var category in ViewBag.CategoriesList)
+                        {
+                            <tr>
+                                <td>@category.categoryId</td>
+                                <td>@category.Name</td>
+                                <td>
+                                    <!-- زر الحذف -->
+                                    <form asp-action="DeleteCategory" method="post" style="display:inline;">
+                                        <input type="hidden" name="categoryId" value="@category.categoryId" />
+                                        <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm('Are you sure you want to delete this category?');">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250308145930_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-project\\Migrations\\20250308145930_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\views\\admin\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\views\\admin\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\models\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\models\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|c:\\users\\53601\\desktop\\ecommerce-project\\project\\e-project\\views\\admin\\subcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A55F3082-4391-437C-9C7B-23212C3FEE8D}|E-project\\E-project.csproj|solutionrelative:e-project\\views\\admin\\subcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250309134537_AddSubCategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-project\\Migrations\\20250309134537_AddSubCategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +54,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250308145930_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250308145930_InitialCreate.cs",
-              "RelativeDocumentMoniker": "E-project\\Migrations\\20250308145930_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250308145930_InitialCreate.cs",
-              "RelativeToolTip": "E-project\\Migrations\\20250308145930_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Categories.cs",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Models\\Categories.cs",
+              "RelativeDocumentMoniker": "E-project\\Models\\Categories.cs",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Models\\Categories.cs",
+              "RelativeToolTip": "E-project\\Models\\Categories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:59:30.653Z",
+              "WhenOpened": "2025-03-09T13:34:44.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "E-project\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Controllers\\AdminController.cs*",
+              "RelativeToolTip": "E-project\\Controllers\\AdminController.cs*",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T13:21:22.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubCategory.cs",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Models\\SubCategory.cs",
+              "RelativeDocumentMoniker": "E-project\\Models\\SubCategory.cs",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Models\\SubCategory.cs",
+              "RelativeToolTip": "E-project\\Models\\SubCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T13:34:47.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Admin\\AddCategory.cshtml",
+              "RelativeDocumentMoniker": "E-project\\Views\\Admin\\AddCategory.cshtml",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Admin\\AddCategory.cshtml",
+              "RelativeToolTip": "E-project\\Views\\Admin\\AddCategory.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAwEQAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T13:56:56.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250309134537_AddSubCategories.cs",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250309134537_AddSubCategories.cs",
+              "RelativeDocumentMoniker": "E-project\\Migrations\\20250309134537_AddSubCategories.cs",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Migrations\\20250309134537_AddSubCategories.cs",
+              "RelativeToolTip": "E-project\\Migrations\\20250309134537_AddSubCategories.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T13:45:38.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "E-project\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Shared\\_AdminLayout.cshtml*",
+              "RelativeToolTip": "E-project\\Views\\Shared\\_AdminLayout.cshtml*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T13:32:39.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "E-project\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "E-project\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T13:34:25.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SubCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Admin\\SubCategory.cshtml",
+              "RelativeDocumentMoniker": "E-project\\Views\\Admin\\SubCategory.cshtml",
+              "ToolTip": "C:\\Users\\53601\\Desktop\\Ecommerce-project\\project\\E-project\\Views\\Admin\\SubCategory.cshtml",
+              "RelativeToolTip": "E-project\\Views\\Admin\\SubCategory.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAwEQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T13:34:58.422Z",
               "EditorCaption": ""
             }
           ]

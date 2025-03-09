@@ -1,0 +1,92 @@
+﻿@model List<E_project.Models.Categories>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; // استخدام Layout الإدارة مباشرة
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div id="successMessage" class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<script>
+    setTimeout(function () {
+        var successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            successMessage.remove(); 
+        }
+    }, 2000); 
+</script>
+
+<h1>Manage Sub-Categories</h1>
+
+<form asp-action="AddSubCategory" method="post">
+    <div class="form-group">
+        <label for="name">Sub-Category Name</label>
+        <input type="text" class="form-control" id="name" name="name" required />
+    </div>
+    <div class="form-group">
+        <label for="category">Select Category</label>
+        <select class="form-control" id="category" name="categoryId" required>
+            @if (Model != null && Model.Count > 0)
+            {
+                @foreach (var category in Model)
+                {
+                    <option value="@category.categoryId">@category.Name</option>
+                }
+            }
+            else
+            {
+                <option disabled>No Categories Available</option>
+            }
+        </select>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Add Sub-Category</button>
+</form>
+
+<!-- جدول عرض الفئات الفرعية -->
+@if (ViewBag.SubCategories != null)
+{
+    <div class="row mt-4">
+        <div class="col-12">
+            <h3>Sub-Category List</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Sub-Category Name</th>
+                        <th>Main Category</th>
+                        <th>Actions</th> <!-- عمود الإجراءات -->
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var subCategory in ViewBag.SubCategories)
+                    {
+                        <tr>
+                            <td>@subCategory.SubCategoryId</td>
+                            <td>@subCategory.Name</td>
+                            <td>@subCategory.Category?.Name</td>
+                            <td>
+                                <!-- زر الحذف -->
+                                <form asp-action="DeleteSubCategory" method="post" style="display:inline;">
+                                    <input type="hidden" name="subCategoryId" value="@subCategory.SubCategoryId" />
+                                    <button type="submit" class="btn btn-sm btn-danger"
+                                            onclick="return confirm('Are you sure you want to delete this sub-category?');">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+else
+{
+    <p>No Sub-Categories available.</p>
+}
