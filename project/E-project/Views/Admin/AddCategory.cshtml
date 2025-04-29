@@ -1,7 +1,7 @@
 ﻿@model E_project.Models.Categories
 
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml"; // استخدام Layout الإدارة مباشرة
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
 }
 @if (TempData["SuccessMessage"] != null)
 {
@@ -11,18 +11,16 @@
 }
 
 <script>
-    // انتظر 5 ثوانٍ ثم احذف الرسالة نهائيًا
     setTimeout(function () {
         var successMessage = document.getElementById("successMessage");
         if (successMessage) {
-            successMessage.remove(); // حذف العنصر من DOM
+            successMessage.remove(); 
         }
-    }, 2000); // انتظر 5 ثوانٍ قبل الحذف
+    }, 2000); 
 </script>
 
 
 <div class="container-fluid">
-    <!-- نموذج إضافة فئة -->
     <div class="row">
         <div class="col-12">
             <h2>Add Category</h2>

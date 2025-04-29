@@ -11,8 +11,10 @@ namespace E_project.Models
         [Display(Name = "Category Name")]
         public string Name { get; set; }
 
-        // العلاقة: Category يمكن أن يحتوي على عدة SubCategories
-        public ICollection<SubCategory> SubCategories { get; set; } = new List<SubCategory>();
+        [Required(ErrorMessage = "Slug is required.")]
+        [Display(Name = "Slug")]
+        public string Slug { get; set; } // <<< أضفنا هذا السطر
 
+        public ICollection<SubCategory> SubCategories { get; set; } = new List<SubCategory>();
     }
 }

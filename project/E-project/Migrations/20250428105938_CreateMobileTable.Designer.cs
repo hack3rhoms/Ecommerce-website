@@ -3,6 +3,7 @@ using E_project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250428105938_CreateMobileTable")]
+    partial class CreateMobileTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,72 +36,9 @@ namespace E_project.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Slug")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.HasKey("categoryId");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("E_project.Models.Laptop", b =>
-                {
-                    b.Property<int>("LaptopId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("LaptopId"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("GraphicsCard")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Images")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ManufactureYear")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("OperatingSystem")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<string>("Processor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("RAM")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<double>("ScreenSize")
-                        .HasColumnType("double");
-
-                    b.Property<string>("Storage")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("SubCategoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LaptopId");
-
-                    b.HasIndex("SubCategoryId");
-
-                    b.ToTable("Laptops");
                 });
 
             modelBuilder.Entity("E_project.Models.Mobile", b =>
@@ -181,17 +121,6 @@ namespace E_project.Migrations
                     b.ToTable("SubCategories");
                 });
 
-            modelBuilder.Entity("E_project.Models.Laptop", b =>
-                {
-                    b.HasOne("E_project.Models.SubCategory", "SubCategory")
-                        .WithMany("Laptops")
-                        .HasForeignKey("SubCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SubCategory");
-                });
-
             modelBuilder.Entity("E_project.Models.Mobile", b =>
                 {
                     b.HasOne("E_project.Models.SubCategory", "SubCategory")
@@ -221,8 +150,6 @@ namespace E_project.Migrations
 
             modelBuilder.Entity("E_project.Models.SubCategory", b =>
                 {
-                    b.Navigation("Laptops");
-
                     b.Navigation("Mobiles");
                 });
 #pragma warning restore 612, 618

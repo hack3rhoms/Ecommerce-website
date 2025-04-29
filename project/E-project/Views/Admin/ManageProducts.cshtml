@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Manage Products";
+}
+
+<h1>Manage Products</h1>
+
+<form method="get" asp-action="ManageProducts" class="row g-3 mb-4">
+    <div class="col-md-3">
+        <select class="form-select" name="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Mobile" selected="@(ViewBag.CategoryFilter == "Mobile" ? "selected" : null)">Mobiles</option>
+            <option value="Laptop" selected="@(ViewBag.CategoryFilter == "Laptop" ? "selected" : null)">Laptops</option>
+
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <input type="text" name="subCategoryFilter" class="form-control" placeholder="Company (Samsung, Apple...)" value="@ViewBag.SubCategoryFilter" />
+    </div>
+
+    <div class="col-md-3">
+        <select class="form-select" name="sortByPrice">
+            <option value="">Sort by Price</option>
+            <option value="asc" selected="@(ViewBag.SortByPrice == "asc" ? "selected" : null)">Low to High</option>
+            <option value="desc" selected="@(ViewBag.SortByPrice == "desc" ? "selected" : null)">High to Low</option>
+        </select>
+    </div>
+
+
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-primary w-100">Filter</button>
+    </div>
+</form>
+
+<div class="row">
+    @foreach (var mobile in (List<E_project.Models.Mobile>)ViewBag.Mobiles)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@mobile.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Mobile - @(mobile.SubCategory?.Name ?? "No SubCategory")</h6>
+                    <p class="card-text">
+                        Price: $@mobile.Price
+                    </p>
+                    <a href="#" class="btn btn-success">View Details</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @foreach (var laptop in (List<E_project.Models.Laptop>)ViewBag.Laptops)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@laptop.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Laptop - @(laptop.SubCategory?.Name ?? "No SubCategory")</h6>
+                    <p class="card-text">
+                        Price: $@laptop.Price
+                    </p>
+                    <a href="#" class="btn btn-success">View Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

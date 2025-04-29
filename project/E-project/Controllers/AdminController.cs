@@ -103,7 +103,113 @@ namespace E_project.Controllers
             return RedirectToAction(nameof(SubCategory)); 
         }
 
-        
+
+        public async Task<IActionResult> AddProduct()
+        {
+            var categories = await _appDbContext.Categories.ToListAsync();
+            ViewBag.CategoriesList = categories; // تمرير قائمة الفئات إلى العرض
+            return View();
+        }
+
+        public async Task<IActionResult> AddMobile()
+        {
+            var subCategories = await _appDbContext.SubCategories.ToListAsync(); // جلب التصنيفات الفرعية
+            ViewBag.SubCategories = subCategories; // تمريرها للفورم
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddMobile(Mobile mobile, List<IFormFile> images)
+        {
+            if (images != null && images.Count > 0)
+            {
+                foreach (var image in images)
+                {
+                    if (image.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await image.CopyToAsync(ms);
+                            var imageBytes = ms.ToArray();
+                            mobile.Images.Add(imageBytes);
+                        }
+                    }
+                }
+            }
+
+            _appDbContext.Mobiles.Add(mobile);
+            await _appDbContext.SaveChangesAsync();
+            return RedirectToAction(nameof(AddMobile));
+        }
+
+        public async Task<IActionResult> AddLaptop()
+        {
+            var subCategories = await _appDbContext.SubCategories.ToListAsync();
+            ViewBag.SubCategories = subCategories;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddLaptop(Laptop laptop, List<IFormFile> images)
+        {
+            if (images != null && images.Count > 0)
+            {
+                foreach (var image in images)
+                {
+                    if (image.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await image.CopyToAsync(ms);
+                            var imageBytes = ms.ToArray();
+                            laptop.Images.Add(imageBytes);
+                        }
+                    }
+                }
+            }
+
+            _appDbContext.Laptops.Add(laptop);
+            await _appDbContext.SaveChangesAsync();
+            return RedirectToAction(nameof(AddLaptop));
+        }
+
+
+
+        public async Task<IActionResult> ManageProducts(string categoryFilter, string subCategoryFilter, string sortByPrice)
+        {
+            List<Mobile> mobiles = new();
+            List<Laptop> laptops = new();
+
+            if (string.IsNullOrEmpty(categoryFilter) || categoryFilter == "Mobile")
+            {
+                mobiles = await _appDbContext.Mobiles
+                    .Include(m => m.SubCategory)
+                    .ToListAsync();
+            }
+
+            if (string.IsNullOrEmpty(categoryFilter) || categoryFilter == "Laptop")
+            {
+                laptops = await _appDbContext.Laptops
+                    .Include(l => l.SubCategory)
+                    .ToListAsync();
+            }
+
+            ViewBag.CategoryFilter = categoryFilter;
+            ViewBag.SubCategoryFilter = subCategoryFilter;
+            ViewBag.SortByPrice = sortByPrice;
+
+            ViewBag.Mobiles = mobiles;
+            ViewBag.Laptops = laptops;
+
+            return View();
+        }
+
+
+
+
+
 
 
     }

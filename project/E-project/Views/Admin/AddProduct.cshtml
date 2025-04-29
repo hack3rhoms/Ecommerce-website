@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Add Product";
+}
+
+<div class="container mt-4">
+    <h2>Select a Category</h2>
+
+    <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-select" id="category">
+            <option value="">-- Select Category --</option>
+            @foreach (var category in (List<E_project.Models.Categories>)ViewBag.CategoriesList)
+            {
+                <option value="@category.Slug">@category.Name</option> <!-- ✅ هنا التعديل -->
+            }
+        </select>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#category").change(function () {
+            var selectedSlug = $("#category").val(); 
+
+            if (selectedSlug === "mobiles") {
+                window.location.href = "/Admin/AddMobile";
+            }
+            else if (selectedSlug === "laptops") {
+                window.location.href = "/Admin/AddLaptop";
+            }
+        });
+    });
+</script>
